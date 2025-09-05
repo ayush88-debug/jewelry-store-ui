@@ -1,6 +1,28 @@
 import React, { useState, useEffect } from 'react';
-import { FaFacebookF, FaInstagram  } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa6";
+
+// --- SVG Icon Imports from assets folder ---
+import BackArrowIcon from './assets/back-arrow.svg';
+import BagIcon from './assets/bag.svg';
+import CheckGreenIcon from './assets/check-green.svg';
+import ChevronDownIcon from './assets/chevron-down.svg';
+import ChevronLeftThinIcon from './assets/chevron-left-thin.svg';
+import ChevronRightThinIcon from './assets/chevron-right-thin.svg';
+import FacebookIcon from './assets/facebook.svg';
+import HamburgerIcon from './assets/hamburger.svg';
+import HeartIcon from './assets/heart.svg';
+import InstagramIcon from './assets/instagram.svg';
+import LinkedinIcon from './assets/linkedin.svg';
+import LoginIcon from './assets/login.svg';
+import PlayIcon from './assets/play.svg';
+import PlusIcon from './assets/plus.svg';
+import PremiumIcon from './assets/premium.svg';
+import ReturnIcon from './assets/return.svg';
+import SidebarLinkIcon from './assets/sidebar-link.svg';
+import SilverIcon from './assets/silver.svg';
+import StarIcon from './assets/star.svg';
+import UserIcon from './assets/user.svg';
+import WarrantyIcon from './assets/warranty.svg';
+
 
 // --- Helper Data ---
 const similarProducts = [
@@ -18,53 +40,6 @@ const topPicks = [
     { id: 4, name: 'Rose Gold Earrings with alloy', price: '1999', originalPrice: '2999', rating: 4, image: 'https://placehold.co/300x400/F5EBEB/B07474?text=Pick+4' },
     { id: 5, name: 'Rose Gold Earrings with alloy', price: '1999', originalPrice: '2999', rating: 4, image: 'https://placehold.co/300x400/F5EBEB/B07474?text=Pick+5' },
 ];
-
-
-// --- SVG Icons ---
-const HamburgerIcon = (props) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-);
-const BagIcon = (props) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-);
-const PlusIcon = (props) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-);
-const PlayIcon = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" {...props}><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-);
-const SidebarLinkIcon = (props) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-);
-const LoginIcon = (props) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-);
-const BackArrowIcon = (props) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-);
-const ChevronDownIcon = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="m6 9 6 6 6-6"/></svg>
-);
-const ChevronLeftThinIcon = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="m15 18-6-6 6-6"/></svg>
-);
-const ChevronRightThinIcon = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="m9 18 6-6-6-6"/></svg>
-);
-const UserIcon = (props) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
-);
-const HeartIcon = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-);
-const StarIcon = ({ filled, ...props }) => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill={filled ? "#00B57A" : "none"} stroke={filled ? "#00B57A" : "#D1D5DB"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-);
-const ReturnIcon = () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12h16M4 12l4-4M4 12l4 4" stroke="#374151" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M12 20a8 8 0 1 0 0-16" stroke="#374151" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>;
-const SilverIcon = () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21.5c-4.142 0-7.5-3.358-7.5-7.5S7.858 6.5 12 6.5s7.5 3.358 7.5 7.5-3.358 7.5-7.5 7.5z" stroke="#374151" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M12 6.5V2.5m-3 12h6" stroke="#374151" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>;
-const WarrantyIcon = () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9" stroke="#374151" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/><path d="M12 7v5l3 2" stroke="#374151" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>;
-const PremiumIcon = () => <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.75l-6.172 3.245 1.179-6.873-5-4.867 6.9-1L12 2.25l3.093 6.255 6.9 1-5 4.867 1.179 6.873L12 17.75z" stroke="#374151" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>;
-const CheckGreenIcon = () => <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.333 4L6 11.333 2.667 8" stroke="#00B57A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>;
 
 const TopBanner = () => {
     return (
@@ -87,7 +62,7 @@ const ProductCard = ({ product }) => {
                     onClick={() => setIsWishlisted(!isWishlisted)}
                     className="absolute top-2 right-2 bg-white rounded-full p-1.5 shadow"
                 >
-                    <HeartIcon className={`w-4 h-4 md:w-5 md:h-5 transition-all ${isWishlisted ? 'fill-rose-500 stroke-rose-500' : 'stroke-zinc-800'}`}/>
+                    <img src={HeartIcon} alt="Wishlist" className={`w-4 h-4 md:w-5 md:h-5 transition-all ${isWishlisted ? 'fill-rose-500 stroke-rose-500' : 'stroke-zinc-800'}`}/>
                 </button>
             </div>
             <h3 className="mt-2 text-xs md:text-sm text-zinc-700">{product.name}</h3>
@@ -110,13 +85,13 @@ const ProductCarousel = ({ title, products }) => {
             <div className="relative">
                 <div className="flex items-center justify-center">
                     <button className="absolute -left-2 md:-left-5 z-10 bg-white p-2.5 rounded-full shadow-lg hover:bg-zinc-100 transition-colors hidden md:block">
-                        <ChevronLeftThinIcon className="h-6 w-6 text-zinc-800"/>
+                        <img src={ChevronLeftThinIcon} alt="Previous" className="h-6 w-6 text-zinc-800"/>
                     </button>
                     <div className="flex space-x-4 md:space-x-6 overflow-x-auto px-4 pb-4">
                         {products.map(product => <ProductCard key={product.id} product={product}/>)}
                     </div>
                     <button className="absolute -right-2 md:-right-5 z-10 bg-white p-2.5 rounded-full shadow-lg hover:bg-zinc-100 transition-colors hidden md:block">
-                        <ChevronRightThinIcon className="h-6 w-6 text-zinc-800"/>
+                        <img src={ChevronRightThinIcon} alt="Next" className="h-6 w-6 text-zinc-800"/>
                     </button>
                 </div>
             </div>
@@ -130,20 +105,20 @@ const Header = ({ onMenuClick }) => (
              {/* Mobile Header */}
             <div className="md:hidden flex items-center gap-4">
                 <button onClick={onMenuClick}>
-                    <HamburgerIcon className="text-zinc-800" />
+                    <img src={HamburgerIcon} alt="Menu" className="text-zinc-800" />
                 </button>
                 <h1 className="text-2xl font-bold">LOGO</h1>
             </div>
             <div className="md:hidden flex items-center space-x-4">
-                <button><HeartIcon className="text-zinc-800"/></button>
-                <button><BagIcon className="text-zinc-800"/></button>
+                <button><img src={HeartIcon} alt="Wishlist" className="text-zinc-800"/></button>
+                <button><img src={BagIcon} alt="Shopping Bag" className="text-zinc-800"/></button>
             </div>
 
             {/* Desktop Header */}
             <h1 className="text-4xl font-bold hidden md:block">LOGO</h1>
             <nav className="hidden md:flex items-center space-x-8 text-zinc-700 text-base">
-                <a href="#" className="flex items-center gap-1 hover:text-[#FF8F9D]">Collections <ChevronDownIcon/></a>
-                <a href="#" className="flex items-center gap-1 hover:text-[#FF8F9D]">Categories <ChevronDownIcon/></a>
+                <a href="#" className="flex items-center gap-1 hover:text-[#FF8F9D]">Collections <img src={ChevronDownIcon} alt="Dropdown"/></a>
+                <a href="#" className="flex items-center gap-1 hover:text-[#FF8F9D]">Categories <img src={ChevronDownIcon} alt="Dropdown"/></a>
                 <a href="#" className="hover:text-[#FF8F9D]">Hot Picks</a>
                 <a href="#" className="hover:text-[#FF8F9D]">Gifts</a>
                 <a href="#" className="hover:text-[#FF8F9D]">Shop All</a>
@@ -198,9 +173,9 @@ const Footer = () => (
                 <div className="col-span-2 md:col-span-full">
                     <h3 className="font-semibold text-zinc-800">Our Social Links:</h3>
                      <div className="flex space-x-4 mt-2">
-                        <a href="#"><FaLinkedin className='text-[#A40303] hover:opacity-75 text-2xl'/></a>
-                        <a href="#"><FaFacebookF className='text-[#A40303] hover:opacity-75 text-2xl' /></a>
-                        <a href="#"><FaInstagram className='text-[#A40303] hover:opacity-75 text-2xl' /></a>
+                         <a href="#"><img src={LinkedinIcon} alt="LinkedIn" className='text-[#A40303] hover:opacity-75 h-6 w-6'/></a>
+                         <a href="#"><img src={FacebookIcon} alt="Facebook" className='text-[#A40303] hover:opacity-75 h-6 w-6' /></a>
+                         <a href="#"><img src={InstagramIcon} alt="Instagram" className='text-[#A40303] hover:opacity-75 h-6 w-6' /></a>
                     </div>
                 </div>
             </div>
@@ -216,20 +191,20 @@ const Footer = () => (
 const Sidebar = ({ isOpen, onClose }) => {
     return (
         <>
-            <div className={`fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={onClose}></div>
+            <div className={`fixed inset-0 bg-black bg-opacity-30 z-40 transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} onClick={onClose}></div>
             <div className={`fixed top-0 left-0 h-full bg-[#CA8787] w-4/5 max-w-sm z-50 transform transition-transform ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 <div className="p-5 text-white">
                     <ul>
-                        <li className="py-3.5 border-b border-white/30"><a href="#" className="flex items-center gap-3 text-base"><PlusIcon /> Add Account</a></li>
-                        <li className="py-3.5 border-b border-white/30"><a href="#" className="flex items-center gap-3 text-base"><SidebarLinkIcon /> Gold Jewellery</a></li>
-                        <li className="py-3.5 border-b border-white/30"><a href="#" className="flex items-center gap-3 text-base"><SidebarLinkIcon /> Silver Jewellery</a></li>
-                        <li className="py-3.5 border-b border-white/30"><a href="#" className="flex items-center gap-3 text-base"><SidebarLinkIcon /> Trending Collection</a></li>
-                        <li className="py-3.5 border-b border-white/30"><a href="#" className="flex items-center gap-3 text-base"><SidebarLinkIcon /> Gifts</a></li>
-                        <li className="py-3.5 border-b border-white/30"><a href="#" className="flex items-center gap-3 text-base"><SidebarLinkIcon /> Shop by Occasion</a></li>
+                        <li className="py-3.5 border-b border-white/30"><a href="#" className="flex items-center gap-3 text-base"><img src={PlusIcon} alt="" /> Add Account</a></li>
+                        <li className="py-3.5 border-b border-white/30"><a href="#" className="flex items-center gap-3 text-base"><img src={SidebarLinkIcon} alt="" /> Gold Jewellery</a></li>
+                        <li className="py-3.5 border-b border-white/30"><a href="#" className="flex items-center gap-3 text-base"><img src={SidebarLinkIcon} alt="" /> Silver Jewellery</a></li>
+                        <li className="py-3.5 border-b border-white/30"><a href="#" className="flex items-center gap-3 text-base"><img src={SidebarLinkIcon} alt="" /> Trending Collection</a></li>
+                        <li className="py-3.5 border-b border-white/30"><a href="#" className="flex items-center gap-3 text-base"><img src={SidebarLinkIcon} alt="" /> Gifts</a></li>
+                        <li className="py-3.5 border-b border-white/30"><a href="#" className="flex items-center gap-3 text-base"><img src={SidebarLinkIcon} alt="" /> Shop by Occasion</a></li>
                     </ul>
                     <div className="mt-6">
                         <a href="#" className="flex items-center justify-center gap-3 bg-white text-zinc-800 font-semibold py-3 px-4 rounded-md text-base">
-                            <LoginIcon /> Login / SignUp
+                            <img src={LoginIcon} alt="Login" /> Login / SignUp
                         </a>
                     </div>
                 </div>
@@ -258,15 +233,15 @@ export default function App() {
       
       <main className="container mx-auto px-4 py-4 md:py-8">
         <div className="text-sm text-zinc-500 mb-4 md:mb-6 flex items-center space-x-2 md:hidden">
-            <button><BackArrowIcon /></button>
+            <button><img src={BackArrowIcon} alt="Back" /></button>
             <span className="font-semibold text-zinc-800 text-lg">Product Details</span>
         </div>
         <div className="text-sm text-zinc-500 mb-6 items-center space-x-2 hidden md:flex">
-            <span>Home</span> <ChevronRightThinIcon className="w-4 h-4" />
-            <span>Jewellery</span> <ChevronRightThinIcon className="w-4 h-4" />
-            <span>Gifts</span> <ChevronRightThinIcon className="w-4 h-4" />
-            <span>Necklace</span> <ChevronRightThinIcon className="w-4 h-4" />
-            <span>Chains</span> <ChevronRightThinIcon className="w-4 h-4" />
+            <span>Home</span> <img src={ChevronRightThinIcon} alt=">" className="w-4 h-4" />
+            <span>Jewellery</span> <img src={ChevronRightThinIcon} alt=">" className="w-4 h-4" />
+            <span>Gifts</span> <img src={ChevronRightThinIcon} alt=">" className="w-4 h-4" />
+            <span>Necklace</span> <img src={ChevronRightThinIcon} alt=">" className="w-4 h-4" />
+            <span>Chains</span> <img src={ChevronRightThinIcon} alt=">" className="w-4 h-4" />
             <span className="font-semibold text-zinc-700">Shining Diva...</span>
         </div>
 
@@ -277,7 +252,7 @@ export default function App() {
                      <div className="bg-zinc-100 flex items-center justify-center p-4 h-[400px] md:h-[550px] relative">
                         <img src="https://placehold.co/450x450/F5EBEB/B07474?text=Product+Image" alt="Gold-Plated Pearls Necklace" className="max-h-full max-w-full object-contain"/>
                         <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 opacity-0 hover:opacity-100 transition-opacity cursor-pointer md:flex hidden">
-                            <PlayIcon className="text-white"/>
+                            <img src={PlayIcon} alt="Play" className="text-white"/>
                         </div>
                      </div>
                      <div className="flex justify-center items-center space-x-2 mt-4 md:hidden">
@@ -288,10 +263,10 @@ export default function App() {
                          <span className="h-1.5 w-1.5 bg-gray-300 rounded-full"></span>
                      </div>
                      <button className="absolute top-1/2 -translate-y-1/2 -left-5 bg-white p-2 rounded-full shadow-md hidden md:block">
-                        <ChevronLeftThinIcon className="h-6 w-6 text-zinc-600"/>
+                        <img src={ChevronLeftThinIcon} alt="Previous" className="h-6 w-6 text-zinc-600"/>
                     </button>
                     <button className="absolute top-1/2 -translate-y-1/2 -right-5 bg-white p-2 rounded-full shadow-md hidden md:block">
-                        <ChevronRightThinIcon className="h-6 w-6 text-zinc-600"/>
+                        <img src={ChevronRightThinIcon} alt="Next" className="h-6 w-6 text-zinc-600"/>
                     </button>
                 </div>
             </div>
@@ -303,7 +278,7 @@ export default function App() {
                 
                 <div className="flex items-center mt-4">
                     <div className="bg-[#00B57A] text-white text-sm font-semibold px-2 py-0.5 rounded flex items-center gap-1">
-                       4.1 <StarIcon filled className="w-3 h-3 text-white fill-white stroke-white"/>
+                       4.1 <img src={StarIcon} alt="Star" className="w-3 h-3 text-white fill-white" style={{ stroke: "#fff" }} />
                     </div>
                     <span className="ml-3 text-sm text-zinc-800 font-semibold">(23)</span>
                 </div>
@@ -320,10 +295,10 @@ export default function App() {
                 </div>
 
                 <div className="grid grid-cols-2 gap-x-6 gap-y-4 mt-6 text-sm text-zinc-700">
-                    <div className="flex items-center space-x-3"><ReturnIcon /><span>Easy 30 Day Return</span></div>
-                    <div className="flex items-center space-x-3"><SilverIcon /><span>925 Silver Plating</span></div>
-                    <div className="flex items-center space-x-3"><WarrantyIcon /><span>6- Month Warranty</span></div>
-                    <div className="flex items-center space-x-3"><PremiumIcon /><span>Premium Gold</span></div>
+                    <div className="flex items-center space-x-3"><img src={ReturnIcon} alt="Return" /><span className='text-lg'>Easy 30 Day Return</span></div>
+                    <div className="flex items-center space-x-3"><img src={SilverIcon} alt="Silver" /><span className='text-lg'>925 Silver Plating</span></div>
+                    <div className="flex items-center space-x-3"><img src={WarrantyIcon} alt="Warranty" /><span className='text-lg'>6- Month Warranty</span></div>
+                    <div className="flex items-center space-x-3"><img src={PremiumIcon} alt="Premium" /><span className='text-lg'>Premium Gold</span></div>
                 </div>
 
                 <div className="mt-8 border rounded-md p-4">
@@ -345,10 +320,10 @@ export default function App() {
                 <div className="mt-6 border-t pt-6">
                     <h3 className="font-semibold text-zinc-800 text-md mb-3">Product Description</h3>
                     <div className="space-y-2 text-zinc-600 text-sm">
-                      <p className="flex items-center gap-2"><CheckGreenIcon /> <span>Material: <span className="font-semibold text-zinc-800">925 Sterling Silver</span></span></p>
-                      <p className="flex items-center gap-2"><CheckGreenIcon /> <span>Plating: <span className="font-semibold text-zinc-800">18K Gold</span></span></p>
-                      <p className="flex items-center gap-2"><CheckGreenIcon /> <span>Weight: <span className="font-semibold text-zinc-800">10grams</span></span></p>
-                      <p className="flex items-center gap-2"><CheckGreenIcon /> <span>Stone Type: <span className="font-semibold text-zinc-800">Premium Jerkin</span></span></p>
+                      <p className="flex items-center gap-2"><img src={CheckGreenIcon} alt="Check" /> <span>Material: <span className="font-semibold text-zinc-800">925 Sterling Silver</span></span></p>
+                      <p className="flex items-center gap-2"><img src={CheckGreenIcon} alt="Check" /> <span>Plating: <span className="font-semibold text-zinc-800">18K Gold</span></span></p>
+                      <p className="flex items-center gap-2"><img src={CheckGreenIcon} alt="Check" /> <span>Weight: <span className="font-semibold text-zinc-800">10grams</span></span></p>
+                      <p className="flex items-center gap-2"><img src={CheckGreenIcon} alt="Check" /> <span>Stone Type: <span className="font-semibold text-zinc-800">Premium Jerkin</span></span></p>
                     </div>
                 </div>
 
@@ -362,7 +337,7 @@ export default function App() {
                     <div className="mt-4">
                         <div className="pb-6">
                            <div className="flex items-center gap-3">
-                               <UserIcon className="text-zinc-400" />
+                               <img src={UserIcon} alt="User" className="text-zinc-400" />
                                <div>
                                    <p className="font-semibold text-zinc-800">Anu</p>
                                    <p className="text-xs text-zinc-500 mt-0.5">15/08/24</p>
@@ -377,7 +352,7 @@ export default function App() {
                         <hr className="border-rose-200" />
                         <div className="pt-6">
                            <div className="flex items-center gap-3">
-                               <UserIcon className="text-zinc-400" />
+                               <img src={UserIcon} alt="User" className="text-zinc-400" />
                                <div>
                                    <p className="font-semibold text-zinc-800">Anu</p>
                                    <p className="text-xs text-zinc-500 mt-0.5">15/08/24</p>
