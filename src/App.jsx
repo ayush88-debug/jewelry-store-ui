@@ -124,8 +124,8 @@ const Header = ({ onMenuClick }) => (
                 <a href="#" className="hover:text-[#FF8F9D]">Shop All</a>
             </nav>
             <div className="hidden md:flex items-center space-x-2">
-                <button className="text-sm px-8 py-2.5 bg-[#FF8F9D] text-white hover:bg-opacity-90 font-semibold rounded-sm">LOGIN</button>
-                <button className="text-sm px-8 py-2.5 border border-[#FF8F9D] text-[#FF8F9D] hover:bg-rose-50 font-semibold rounded-sm">REGISTER</button>
+                <button className="text-sm px-8 py-2.5 bg-[#FF8F9D] text-white hover:bg-opacity-90 font-bold">LOGIN</button>
+                <button className="text-sm px-8 py-2.5 border border-[#FF8F9D] text-[#FF8F9D] hover:bg-rose-50 font-bold">REGISTER</button>
             </div>
         </div>
     </header>
@@ -277,7 +277,7 @@ export default function App() {
                 <span className="inline-block font-['Roboto'] font-medium text-lg md:text-4xl text-gray-400">Made with 925 Silver</span>
                 
                 <div className="flex items-center mt-4">
-                    <div className="bg-[#00B57A] text-white text-sm font-semibold px-2 py-0.5 rounded flex items-center gap-1">
+                    <div className="bg-[#388E3C] text-white text-sm font-semibold px-2 py-0.5 flex items-center gap-1">
                        4.1 <img src={StarIcon} alt="Star" className="w-3 h-3 text-white fill-white" style={{ stroke: "#fff" }} />
                     </div>
                     <span className="ml-3 text-sm text-zinc-800 font-semibold">(23)</span>
@@ -290,8 +290,8 @@ export default function App() {
                 </div>
                 
                 <div className="mt-8 flex space-x-4">
-                    <button className="flex-1 border border-[#FF8F9D] text-[#FF8F9D] font-bold py-3 hover:bg-rose-50 transition-colors text-sm rounded-sm">ADD TO CART</button>
-                    <button className="flex-1 bg-[#FF8F9D] text-white font-bold py-3 hover:bg-opacity-90 transition-colors text-sm rounded-sm">BUY NOW</button>
+                    <button className="flex-1 border border-[#FF8F9D] text-[#FF8F9D] font-bold py-3 hover:bg-rose-50 transition-colors text-sm">ADD TO CART</button>
+                    <button className="flex-1 bg-[#FF8F9D] text-white font-bold py-3 hover:bg-opacity-90 transition-colors text-sm">BUY NOW</button>
                 </div>
 
                 <div className="grid grid-cols-2 gap-x-6 gap-y-4 mt-6 text-sm text-zinc-700">
