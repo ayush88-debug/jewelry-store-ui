@@ -286,7 +286,7 @@ export default function App() {
                 <div className="mt-4 flex items-baseline">
                     <span className="text-3xl font-bold text-zinc-900">₹ 1,600</span>
                     <span className="text-lg text-zinc-400 line-through ml-3">₹2,000</span>
-                    <span className="text-green-600 font-semibold ml-4">(20% off)</span>
+                    <span className="text-[#388E3C] font-semibold ml-4">(20% off)</span>
                 </div>
                 
                 <div className="mt-8 flex space-x-4">
